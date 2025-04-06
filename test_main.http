@@ -1,9 +1,14 @@
-# Test your FastAPI endpoints
+### Transkribiere Audio mit dem tiny-Modell
+POST http://127.0.0.1:8000/transcribe
+Content-Type: multipart/form-data; boundary=WebAppBoundary
 
-GET http://127.0.0.1:8000/
-Accept: application/json
-###
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="audio.mp3"
+Content-Type: audio/mpeg
 
-GET http://127.0.0.1:8000/hello/User
-Accept: application/json
-###
+< ./audio.mp3
+--WebAppBoundary
+Content-Disposition: form-data; name="model"
+
+tiny
+--WebAppBoundary--
