@@ -5,11 +5,12 @@ app = FastAPI()
 
 # Preload the Whisper models globally
 models = {
-    "tiny": whisper.load_model("tiny"),
+   # "tiny": whisper.load_model("tiny"),
    # "base": whisper.load_model("base"),
    # "small": whisper.load_model("small"),
    # "medium": whisper.load_model("medium"),
    # "large": whisper.load_model("large"),
+    "turbo": whisper.load_model("turbo"),
 }
 
 print("Loaded models: " + ", ".join(models.keys()))

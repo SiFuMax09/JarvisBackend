@@ -13,7 +13,7 @@ files = {
 
 # Formular-Parameter
 data = {
-    'model': 'tiny',
+    'model': 'turbo',
     # 'language': 'de'  # Optional, auskommentiert
 }
 
